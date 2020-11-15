@@ -11,11 +11,12 @@ All years not divisible by 4 are NOT leap years.
 describe("leap years", () => {
     it("if divisible by 400, return true", () => {
         expect(leapYears(400)).toBeTruthy();
-        expect(leapYears(800)).toBeTruthy();
-        expect(leapYears(799)).toBeFalsy();
+        expect(leapYears(2000)).toBeTruthy();
+        expect(leapYears(1900)).toBeFalsy();
     });
     it("if divisible by 4 but not 100, return true", () => {
-        expect(leapYears(4)).toBeTruthy();
-        expect(leapYears(100)).toBeFalsy();
+        expect(leapYears(2008)).toBeTruthy();
+        expect(leapYears(2017)).toBeFalsy();
+        expect(leapYears(2100)).toBeFalsy();
     })
 })
