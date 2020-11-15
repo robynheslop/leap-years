@@ -14,4 +14,8 @@ describe("leap years", () => {
         expect(leapYears(800)).toBeTruthy();
         expect(leapYears(799)).toBeFalsy();
     });
+    it("if divisible by 4 but not 100, return true", () => {
+        expect(leapYears(4)).toBeTruthy();
+        expect(leapYears(100)).toBeFalsy();
+    })
 })
